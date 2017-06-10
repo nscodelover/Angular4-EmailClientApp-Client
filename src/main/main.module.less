@@ -1,0 +1,163 @@
+@import "../assets/styles/constants";
+
+.ma-navigation-bar {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+
+  .ma-caption {
+    margin-left: 20px;
+  }
+
+  .ma-logout-button {
+    width: 100px;
+    height: 100%;
+    font-size: 1em;
+    border-radius: 0;
+  }
+}
+
+.ma-sidebar {
+  padding-top: 10px;
+  margin-top: 50px;
+  overflow: hidden;
+
+
+  .k-button.ma-toggle-sidebar-button {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+  }
+}
+
+.ma-sidebar.ng-sidebar--opened {
+  width: 150px;
+
+  .k-button.ma-show-component-button {
+    text-align: left;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.ma-sidebar.ng-sidebar--closed {
+  width: 40px;
+}
+
+.ma-content {
+  padding: 0 30px;
+  margin-top: 70px;
+  margin-left: 40px;
+}
+
+.ma-content.ma-sidebar-opened {
+  margin-left: 150px;
+}
+
+.ma-form-page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .ma-navigation-link {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    color: @red-color;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      color: @red-color-hover;
+    }
+  }
+
+  .ma-user-registration-form {
+    width: 500px;
+  }
+
+  &.ma-login-page {
+    top: 45%;
+    bottom: 55%;
+
+    .ma-user-login-form {
+      width: 300px;
+    }
+  }
+
+  .ma-restore-password-form {
+    max-width: 500px;
+  }
+}
+
+.ma-mailbox-header {
+  height: 75px;
+  background-color: #bababa;
+}
+
+.ma-mailbox-left-panel {
+  width: 30%;
+  height: 100%;
+  float: left;
+  background-color: rgb(220, 220, 220);
+}
+
+.ma-mailbox-right-panel {
+  width: 70%;
+  height: 100%;
+  float: left;
+}
+
+.ma-mailbox-header {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ma-mailbox-footer {
+  height: 75px;
+  background-color: #bababa;
+  clear:both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    width: 30ppx;
+    height: 20px;
+  }
+}
+
+.ma-mailbox-folder {
+  width: 100%;
+  height: 50px;
+  text-align: left;
+.ma-mailbox-folder-name {
+    margin-left: 30px;
+  }
+}
+
+.ma-mailbox-list-item {
+  width: 100%;
+  height: 75px;
+  text-align: left;
+
+  .ma-mailbox-message-title {
+    margin-left: 30px;
+  }
+}

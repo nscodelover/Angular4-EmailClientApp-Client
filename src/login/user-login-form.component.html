@@ -1,0 +1,7 @@
+<div class="ma-user-login-form ma-form ma-form-shadow">
+    <h3 class="k-header ma-text-center">Login to your account</h3>
+    <input type="text" class="k-textbox" [(ngModel)]="username" placeholder="Username">
+    <input type="password" class="k-textbox" [(ngModel)]="password" placeholder="Password">
+    <button class="ma-action-button" kendoButton (click)="login()" [primary]="true">Login to your account</button>
+    <error-label class="ma-response-error" [error]="getLastError()"></error-label>
+</div>

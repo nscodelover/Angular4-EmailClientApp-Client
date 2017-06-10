@@ -1,0 +1,71 @@
+@import "./constants";
+
+.ma-form-shadow {
+  padding: 10px 20px 35px 20px;
+  -webkit-box-shadow: 4px 4px 16px 0 rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 4px 4px 16px 0 rgba(50, 50, 50, 0.2);
+  box-shadow: 4px 4px 16px 0 rgba(50, 50, 50, 0.2);
+}
+
+.ma-form {
+  form {
+    width: 100%;
+  }
+
+  .ma-horizontal {
+    display: flex;
+    justify-content: space-between;
+
+    .ma-field {
+      margin: 0;
+      flex-grow: 1;
+    }
+
+    & .ma-field:not(:first-child) {
+      margin-left: 10px;
+    }
+
+    & .ma-field:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  & .ma-field:first-child {
+    margin-top: 0;
+  }
+
+  &.ma-not-collapsible-labels {
+    .ma-field {
+      margin-top: 0.3em;
+
+      .ma-error-label {
+        margin-top: 0.2em;
+        font-size: 0.9em;
+        height: 1.1em;
+      }
+    }
+  }
+}
+
+.ma-field {
+  margin-top: 1em;
+  width: 100%;
+
+  .control-label {
+    font-weight: bold;
+    color: @black-color;
+  }
+
+  &.ma-boolean-field {
+    display: flex;
+    align-items: center;
+
+    label {
+      margin-right: 5px;
+    }
+  }
+
+  input[type=text], input[type=number], input[type=password], kendo-dropdownlist {
+    width: 100%;
+  }
+}

@@ -1,0 +1,15 @@
+<div class="ma-mailbox-window">
+    <div class="ma-mailbox-header">
+        <h2 class="ma-text-black">Mail Box</h2>
+    </div>
+    <div class="ma-mailbox-left-panel">
+        <mailbox-folder *ngFor="let name of folderNames" [folderName]="name" (updateMails)="updateMails($event)" ></mailbox-folder>
+    </div>
+    <div class="ma-mailbox-right-panel">
+        <mailbox-message-list-item *ngFor="let m of messages" [messageID]="m"></mailbox-message-list-item>
+    </div>
+    <div class="ma-mailbox-footer">
+        <button class="prev-btn" (click)="clickPrevPage($event)">prev</button>
+        <button class="next-btn" (click)="clickNextPage($event)">next</button>
+    </div>
+</div>

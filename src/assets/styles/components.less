@@ -1,0 +1,42 @@
+@import "constants";
+
+@menu-background-active: #ededed;
+
+.ma-link {
+  color: @red-color;
+  cursor: pointer;
+
+  &:hover {
+    color: @red-color-hover;
+  }
+
+  i {
+    margin-right: 5px;
+  }
+}
+
+.ma-vertical-menu {
+  list-style: none;
+  padding-left: 0;
+
+  .ma-menu-item {
+    padding: 0.3em 0.8em;
+    color: @black-color;
+    font-size: 17px;
+    cursor: pointer;
+
+    &.ma-active {
+      background-color: @menu-background-active;
+    }
+
+    .ma-icon {
+      margin-bottom: 3px;
+      padding-right: 8px;
+      font-size: 16px;
+    }
+
+    &:hover {
+      background-color: @menu-background-active;
+    }
+  }
+}
